@@ -8,7 +8,12 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+try {
+  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+} catch (error) {
+  console.error(error.message)
+}
+
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
